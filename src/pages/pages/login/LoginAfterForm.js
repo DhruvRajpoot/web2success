@@ -32,13 +32,13 @@ const LoginAfterForm = (props) => {
     // ** States
     const toggleForm = props.toggleForm;
     const userdetails = props.userdetails;
-    
+
     const [values, setValues] = useState({
-        username: userdetails.username,
-        email: userdetails.email,
-        firstName: userdetails.firstName,
-        lastName: userdetails.lastName,
-        gender: userdetails.gender
+        username: userdetails?userdetails.username:'',
+        email: userdetails?userdetails.email:'',
+        firstName: userdetails?userdetails.firstName:'',
+        lastName: userdetails?userdetails.lastName:'',
+        gender: userdetails?userdetails.gender:'',
     });
 
     const handleChange = (event) => {
