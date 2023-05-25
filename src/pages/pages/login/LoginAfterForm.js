@@ -31,6 +31,7 @@ const LoginAfterForm = (props) => {
 
     // ** States
     const toggleForm = props.toggleForm;
+    
     const userdetails = props.userdetails?props.userdetails:{
         username: '',
         email: '',
