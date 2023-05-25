@@ -34,11 +34,11 @@ const LoginAfterForm = (props) => {
     const userdetails = props.userdetails;
 
     const [values, setValues] = useState({
-        username: userdetails?userdetails.username:'',
-        email: userdetails?userdetails.email:'',
-        firstName: userdetails?userdetails.firstName:'',
-        lastName: userdetails?userdetails.lastName:'',
-        gender: userdetails?userdetails.gender:'',
+        username: Object.keys(userdetails).length !== 0 ? userdetails.username : '',
+        email: Object.keys(userdetails).length !== 0 ? userdetails.email : '',
+        firstName: Object.keys(userdetails).length !== 0 ? userdetails.firstName : '',
+        lastName: Object.keys(userdetails).length !== 0 ? userdetails.lastName : '',
+        gender: Object.keys(userdetails).length !== 0 ? userdetails.gender : '',
     });
 
     const handleChange = (event) => {
