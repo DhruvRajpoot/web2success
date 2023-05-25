@@ -31,14 +31,16 @@ const LoginAfterForm = (props) => {
 
     // ** States
     const toggleForm = props.toggleForm;
-    
-    const userdetails = props.userdetails?props.userdetails:{
-        username: '',
-        email: '',
-        firstName: '',
-        lastName: '',
-        gender: '',
-    };
+
+    const userdetails = props.userdetails ?
+        props.userdetails :
+        {
+            username: '',
+            email: '',
+            firstName: '',
+            lastName: '',
+            gender: '',
+        };
 
     const [values, setValues] = useState({
         username: userdetails.username,
